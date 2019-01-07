@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author joeriroijenga
- *
- */
-module test {
-}
