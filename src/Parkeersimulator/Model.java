@@ -1,4 +1,4 @@
-package nl.hanze.t12.mvc;
+package Parkeersimulator;
 
 import java.util.*;
 

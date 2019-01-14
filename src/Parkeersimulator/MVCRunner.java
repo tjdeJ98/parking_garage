@@ -1,4 +1,4 @@
-package nl.hanze.t12.mvc;
+package Parkeersimulator;
 
 public class MVCRunner {
 	public static void main(String[] args) {
