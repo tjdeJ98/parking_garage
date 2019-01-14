@@ -38,7 +38,8 @@ public class Simulator {
     }
 
     public void run() {
-        for (int i = 0; i < 10000; i++) {
+    	// was 10000
+        for (int i = 0; i < 10; i++) {
             tick();
         }
     }

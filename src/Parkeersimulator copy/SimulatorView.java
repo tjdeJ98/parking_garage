@@ -18,9 +18,28 @@ public class SimulatorView extends JFrame {
         this.numberOfOpenSpots =numberOfFloors*numberOfRows*numberOfPlaces;
         cars = new Car[numberOfFloors][numberOfRows][numberOfPlaces];
         
-        carParkView = new CarParkView();
-
+        carParkView = new CarParkView();        
+        this.setTitle("Carparking");
         Container contentPane = getContentPane();
+        
+        // Test code        
+        JPanel panelWest = new JPanel();
+        JPanel panelSouth = new JPanel();
+        JPanel panelNorth = new JPanel();
+        
+        panelWest.setLayout(new GridLayout(0,1));
+        panelSouth.setLayout(new FlowLayout());
+        panelNorth.setLayout(new FlowLayout());
+        
+        setPanelButtons(panelWest);
+        setPanelButtons(panelSouth);
+        setPanelButtons(panelNorth);
+        
+        contentPane.add(panelSouth, BorderLayout.SOUTH);
+        contentPane.add(panelWest, BorderLayout.WEST);
+        contentPane.add(panelNorth, BorderLayout.NORTH);
+        // Einde test code
+        
         contentPane.add(carParkView, BorderLayout.CENTER);
         pack();
         setVisible(true);
@@ -28,6 +47,23 @@ public class SimulatorView extends JFrame {
         updateView();
     }
 
+    // Test code
+    public void setPanelButtons(JPanel panel) {
+    	JButton button1 = new JButton("Start");
+        JButton button2 = new JButton("test");
+        JButton button3 = new JButton("test");
+        JButton button4 = new JButton("test");
+        
+        Start handler = new Start();
+        button1.addActionListener(handler);
+        
+        panel.add(button1);
+        panel.add(button2);
+        panel.add(button3);
+        panel.add(button4);   
+    }    
+    // Einde test code
+    
     public void updateView() {
         carParkView.updateView();
     }
