@@ -1,29 +1,14 @@
 package Parkeersimulator;
 
-import java.awt.*;
-
-public abstract class Car {
-
-    private Location location;
-    private int minutesLeft;
+public abstract class Vehicle {
+	private int minutesLeft;
     private boolean isPaying;
     private boolean hasToPay;
-
-    /**
-     * Constructor for objects of class Car
-     */
-    public Car() {
-
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
+    
+	public Vehicle() {
+		
+	}
+	
     public int getMinutesLeft() {
         return minutesLeft;
     }
@@ -47,10 +32,8 @@ public abstract class Car {
     public void setHasToPay(boolean hasToPay) {
         this.hasToPay = hasToPay;
     }
-
+    
     public void tick() {
         minutesLeft--;
     }
-    
-    public abstract Color getColor();
 }
